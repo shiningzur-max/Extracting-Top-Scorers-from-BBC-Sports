@@ -1,0 +1,81 @@
+📊 Web Scraping Project: Extracting Top Scorers from BBC Sports
+1. Introduction
+In this project, we perform web scraping to extract football Top Scorer data from the sports section of BBC. Web scraping is an important technique in data science that allows us to collect real-world data directly from websites.
+This project focuses on collecting goal-scoring statistics of players and converting them into a structured dataset for analysis.
+
+2. Objective
+The main objective of this project is:
+To extract Top Scorer player data from the BBC website
+To understand how to locate and extract specific elements from a webpage
+To convert unstructured HTML data into structured format
+To prepare the dataset for further analysis
+
+3. Why This Project?
+In real-world scenarios, data is not always available in ready-made datasets. We often need to collect it ourselves.
+This project helps in:
+Learning practical web scraping skills
+Understanding HTML structure and tags
+Building a real-world data collection project
+Strengthening your data analyst portfolio
+
+4. Tools & Technologies Used
+Python
+Requests Library → To fetch webpage content
+BeautifulSoup → To parse HTML
+Pandas → To organize data into DataFrame
+
+5. Understanding the Website Structure
+Before extracting data, the website is inspected using browser developer tools.
+We identify:
+The section where Top Scorer data is displayed
+HTML tags (such as <div>, <span>)
+Class names or unique identifiers
+Each player’s data (name, goals, rank) is stored inside specific HTML elements, which we target during extraction.
+
+6. Data Extraction Process
+Step 1: Sending Request
+We send an HTTP request to the BBC webpage using requests.get() to retrieve HTML content.
+Step 2: Parsing HTML
+We use BeautifulSoup to parse the HTML and make it searchable.
+Step 3: Locating Elements
+We identify the container that holds Top Scorer player data using:
+find()
+find_all()
+Step 4: Extracting Data
+We loop through each player element and extract:
+Player Name
+Goals scored
+Ranking (if available)
+Step 5: Storing Data
+The extracted data is stored in:
+Python lists
+Converted into a Pandas DataFrame
+Optionally saved as a CSV file
+
+7. Challenges Faced
+🔹 Issue: Identifying Correct Data Section
+Sometimes multiple sections exist on the webpage, so selecting the correct HTML container for Top Scorers is important.
+🔹 Issue: Website Structure Complexity
+Modern websites may use nested HTML elements, making extraction slightly complex.
+
+Solution:
+Carefully inspect the HTML structure and use accurate class names or tags.
+
+8. Data Cleaning
+After extraction:
+Remove unnecessary spaces
+Convert goal values into integers
+Ensure consistency in player names
+
+9. Final Output
+The final dataset contains:
+Player Name
+Goals scored
+Ranking (if available)
+This dataset can be used for:
+Player performance analysis
+Ranking comparisons
+Data visualization
+
+10. Conclusion
+This project demonstrates how to extract Top Scorer football data from a real-world website like BBC. It highlights the importance of understanding webpage structure and converting raw HTML into meaningful datasets.
